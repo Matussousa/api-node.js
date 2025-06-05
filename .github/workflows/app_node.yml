@@ -1,4 +1,4 @@
-name: CI/CD Node App
+name: Node App
 
 on:
   push:
