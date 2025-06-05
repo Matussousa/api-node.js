@@ -8,12 +8,12 @@ O objetivo deste projeto é construir uma aplicação Node.js simples, exposta v
     const app = express();
 
     app.get('/', (req, res) => {
-    res.json({ message: "Hello, CI/CD Node!" });
+      res.json({ message: "Hello, CI/CD Node!" });
     });
 
     const PORT = process.env.PORT || 5000;
     if (process.env.NODE_ENV !== 'test') {
-    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+      app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
     }
     export default app;
 ```
@@ -82,6 +82,6 @@ jobs:
 ### Empacotamento e Execução com Docker
 
 ```bash
-    docker build -t simple-ci-cd-node .
-    docker run -p 5000:5000 simple-ci-cd-node
+    docker build -t api-node .
+    docker run -p 5000:5000 api-node
 ```
